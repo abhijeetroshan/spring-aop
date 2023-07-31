@@ -9,7 +9,7 @@ public class ShoppingCart {
         System.out.println("Checkout method from demo ShoppingCart is called status is " + status);
     }
 
-    public int returnDemo() {
+    public int returnDemo(int  i) {
         return 2;
     }
 }

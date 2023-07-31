@@ -9,5 +9,6 @@ public class Main {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
         ShoppingCart shoppingCart = applicationContext.getBean(ShoppingCart.class);
         shoppingCart.checkout("CANCELLED");
+        shoppingCart.returnDemo(10);
     }
 }

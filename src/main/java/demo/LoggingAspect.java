@@ -19,4 +19,13 @@ public class LoggingAspect {
         System.out.println(joinPoint.getArgs()[0].toString());
         System.out.println("After Loggers");
     }
+
+    @Pointcut("execution(* *.*.returnDemo(..))")
+    public void afterReturningPointcut() {
+    }
+
+    @AfterReturning(pointcut = "execution(* demo.ShoppingCart.returnDemo(..))", returning = "returnVal")
+    public void afterReturning(String returnVal) {
+        System.out.println("returnVal = " + returnVal);
+    }
 }
